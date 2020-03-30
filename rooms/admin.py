@@ -5,7 +5,15 @@ from . import models
 @admin.register(models.RoomType, models.Facility, models.Amenity, models.HouseRule)
 class ItemAdmin(admin.ModelAdmin):
 
-    """ Itemp Admin Definition """
+    """ Item Admin Definition """
+
+    list_display = (
+        "name",
+        "used_by",
+    )
+
+    def used_by(self, obj):
+        return obj.rooms.count()
 
     pass
 
@@ -45,6 +53,14 @@ class RoomAdmin(admin.ModelAdmin):
         "check_in",
         "check_out",
         "instant_book",
+        "count_amenities",
+        "count_photos",
+    )
+
+    ordering = (
+        "name",
+        "price",
+        "bedrooms",
     )
 
     list_filter = (
@@ -65,6 +81,14 @@ class RoomAdmin(admin.ModelAdmin):
         "facilities",
         "house_rules",
     )
+
+    def count_amenities(self, obj):
+        return obj.amenities.count()
+
+    count_amenities.short_description = "Amenities"
+
+    def count_photos(self, obj):
+        return obj.photos.count()
 
 
 @admin.register(models.Photo)
