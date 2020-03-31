@@ -1,11 +1,11 @@
 {
-  "python.pythonPath": "C:\\Users\\143011\\.virtualenvs\\airbnb-clone-RqE7Z8am\\Scripts\\python.exe",
-  "python.linting.pylintEnabled": false,
-  "python.linting.flake8Enabled": true,
-  "python.linting.enabled": true,
-  "python.formatting.provider": "black",
-"python.linting.flake8Args": [
-	"--max-line-length=88"
-],
-"git.ignoreLimitWarning": true
+	"python.pythonPath": "C:\\Users\\143011\\.virtualenvs\\airbnb-clone-RqE7Z8am\\Scripts\\python.exe",
+	"python.linting.pylintEnabled": false,
+	"python.linting.flake8Enabled": true,
+	"python.linting.enabled": true,
+	"python.formatting.provider": "black",
+	"python.linting.flake8Args": ["--max-line-length=88"],
+	"git.ignoreLimitWarning": true,
+	"editor.formatOnSave": true,
+	"editor.insertSpaces": true
 }
