@@ -20,7 +20,7 @@ from django.conf.urls.static import static
 from rooms import views as room_views
 
 urlpatterns = [
-    path("", room_views.all_rooms),
+    path("", room_views.HomeView.as_view()),
     path("admin/", admin.site.urls),
 ]
 
