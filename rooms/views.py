@@ -1,4 +1,6 @@
-from django.views.generic import ListView
+from django.views.generic import ListView, DetailView
+from django.http import Http404
+from django.shortcuts import render
 from django.utils import timezone
 from . import models
 
@@ -13,8 +15,6 @@ class HomeView(ListView):
     ordering = "created"
     context_object_name = "rooms"
 
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        now = timezone.now()
-        context['now'] = now
-        return context
+
+class RoomDetail(DetailView):
+    model = models.Room
