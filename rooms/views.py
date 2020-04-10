@@ -1,8 +1,7 @@
 from django.views.generic import ListView, DetailView
-from django.http import Http404
 from django.shortcuts import render
-from django.utils import timezone
-from . import models
+from django_countries import countries
+from . import models, forms
 
 
 class HomeView(ListView):
@@ -18,3 +17,9 @@ class HomeView(ListView):
 
 class RoomDetail(DetailView):
     model = models.Room
+
+
+def search(request):
+
+    form = forms.SearchForm()
+    return render(request, "rooms/search.html", {"form": form,})
