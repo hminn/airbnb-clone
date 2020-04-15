@@ -1,4 +1,5 @@
 from django.views.generic import ListView, DetailView, View
+from django.views.decorators.csrf import csrf_exempt
 from django.shortcuts import render
 from django.core.paginator import Paginator
 from . import models, forms

@@ -20,7 +20,7 @@ class CustomUserAdmin(UserAdmin):
                     "language",
                     "currency",
                     "superhost",
-                    )
+                )
             },
         ),
     )
@@ -35,7 +35,7 @@ class CustomUserAdmin(UserAdmin):
         "is_superuser",
         "currency",
         "superhost",
-        )
-    list_filter = UserAdmin.list_filter + (
-        "superhost",
+        "email_verified",
+        "email_secret",
     )
+    list_filter = UserAdmin.list_filter + ("superhost",)
