@@ -24,16 +24,12 @@ class RoomType(AbstractItem):
         verbose_name_plural = "Room Type"
         ordering = ["name"]
 
-    pass
-
 
 class Amenity(AbstractItem):
     """ Amenity Model Definition """
 
     class Meta:
         verbose_name_plural = "Amenities"
-
-    pass
 
 
 class Facility(AbstractItem):
@@ -42,8 +38,6 @@ class Facility(AbstractItem):
 
     class Meta:
         verbose_name_plural = "Facilities"
-
-    pass
 
 
 class HouseRule(AbstractItem):
