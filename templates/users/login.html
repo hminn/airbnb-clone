@@ -8,10 +8,17 @@
 {% endblock search-bar %}
 
 {% block content %}
-    {% include "partials/social_login.html" %}
-    <form method="POST" action='{%url "users:login"%}'>
-        {% csrf_token %}
-        {{form.as_p}}
-    <button>Login</button>
-    </form>
+    <div class="container xl:w-1/4 lg:w-5/12 md:w-1/2 sm:w-1/2 mx-auto my-10 flex flex-col items-center border p-6 border-gray-400">
+        {% include "partials/social_login.html" %}
+        <form method="POST" action='{%url "users:login"%}'>
+            {% csrf_token %}
+            {{form.email}}
+            {{form.password}}
+            <button class="btn bg-red-500 text-white mb-3">Login</button>
+        </form>
+        <div>
+            <span class="mr-2"> Don't have an account?</span>
+            <a href="{% url 'users:signup' %}" class="text-teal-500 font-bold">Sign up</a>
+        </div>
+    </div>
 {% endblock content %}
