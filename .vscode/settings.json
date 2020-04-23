@@ -7,5 +7,6 @@
 	"python.linting.flake8Args": ["--max-line-length=88"],
 	"git.ignoreLimitWarning": true,
 	"editor.formatOnSave": true,
-	"editor.insertSpaces": true
+	"editor.insertSpaces": true,
+	"emmet.includeLanguages": { "django-html": "html" }
 }
