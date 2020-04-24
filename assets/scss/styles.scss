@@ -23,8 +23,16 @@ input {
 }
 
 form {
-    input {
-        @apply mb-3;
+    .input {
+        @apply mb-3 w-full;
+        &.has_error {
+            input {
+                @apply border-gray-600 bg-red-200;
+                &:focus {
+                    @apply border-gray-600;
+                }
+            }
+        }
     }
 }
 
