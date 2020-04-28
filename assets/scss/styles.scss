@@ -15,11 +15,27 @@
     @apply text-center rounded-sm py-4 font-light text-lg w-full;
 }
 
-input {
+.btn-link {
+    @apply text-center py-3 rounded-lg font-light text-lg w-full bg-red-500 text-white;
+}
+
+input,
+textarea,
+select {
     @apply rounded-sm py-4 font-light text-lg w-full text-left px-3 border border-gray-600;
     &:focus {
         @apply outline-none border-teal-500;
     }
+}
+
+textarea {
+    resize: none;
+    height: 150px;
+}
+
+select {
+    @apply py-0 px-0 pl-2;
+    height: 50px;
 }
 
 form {
